@@ -21,8 +21,6 @@ WORKDIR $PROJECT_DIR
 
 # Copy necessary files
 COPY renv.lock ./
-COPY sdk.R ./
-COPY src/ ./src/
 COPY data/ ./data/
 COPY tests/ ./tests/
 COPY RFunction.R ./
