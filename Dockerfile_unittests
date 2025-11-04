@@ -7,11 +7,13 @@ ENV PROJECT_DIR=/moveapps-r-sdk
 ENV RENV_PATHS_CACHE=/renv/cache
 
 RUN apt-get update && apt-get install -y \
+    libabsl-dev \
     libcurl4-openssl-dev \
+    libgdal-dev \
     libssl-dev \
-    libxml2-dev \ 
     libudunits2-dev \
-    libgdal-dev
+    libxml2-dev \ 
+    && rm -rf /var/lib/apt/lists/*
 
 # Create the project directory
 RUN mkdir -p $PROJECT_DIR
